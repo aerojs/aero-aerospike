@@ -1,0 +1,15 @@
+{
+	"name": "aero-aerospike",
+	"version": "0.0.1",
+	"description": "Aerospike database client for Aero.",
+	"keywords": [
+		"aero",
+		"aerospike"
+	],
+	"homepage": "",
+	"repository": "aerojs/aero-aerospike",
+	"license": "",
+	"dependencies": {
+		"aerospike": "*"
+	}
+}
