@@ -10,6 +10,7 @@
 	"repository": "aerojs/aero-aerospike",
 	"license": "",
 	"dependencies": {
-		"aerospike": "*"
+		"aerospike": "*",
+		"bluebird": "*"
 	}
 }
