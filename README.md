@@ -2,9 +2,40 @@
 
 This client can be used as a standalone package (without using Aero). It is a lightweight wrapper built on top of the official node.js client. All API calls return [bluebird](https://github.com/petkaantonov/bluebird/) promises.
 
-# API
+## Installation
+Add `aero-aerospike` to `dependencies` in your `package.json`:
 
-## Creating a client
+```json
+"dependencies": {
+	"aero-aerospike": "*"
+}
+```
+
+```
+npm install
+```
+
+## Usage with Aero
+Add the database configuration to your `config.json`:
+
+```json
+"database": {
+	"host": "127.0.0.1:3000",
+	"namespace": "test"
+}
+```
+
+Now you can subscribe to the event `database ready`:
+
+```js
+app.on('database ready', db => {
+	db.get('Users', 'test').then(console.log)
+})
+```
+
+## API
+
+### Creating a client
 
 ```js
 let aerospike = require('aero-aerospike')
@@ -17,7 +48,7 @@ let db = aerospike.client({
 db.connect()
 ```
 
-## aerospike.client
+### aerospike.client
 ```js
 let db = aerospike.client({
 	host: '127.0.0.1:3000',
@@ -26,12 +57,12 @@ let db = aerospike.client({
 ```
 The configuration parameters are directly handed over to the `Aerospike.client` constructor of the officia aerospike node library. Therefore you can also specify `hosts`, `log`, `policies` and so on. `host` is a shortcut notation added by this library. `namespace` specifies the namespace you want to operate on.
 
-## get
+### get
 ```js
 db.get('Users', 'key')
 ```
 
-## set
+### set
 ```js
 db.set('Users', 'key', {
 	name: 'Will Smith'
@@ -40,32 +71,32 @@ db.set('Users', 'key', {
 
 Does not delete existing properties if the record already exists. Only updates the `name` property.
 
-## remove
+### remove
 ```js
 db.remove('Users', 'key')
 ```
 
-## forEach
+### forEach
 ```js
 db.forEach('Users', user => console.log(user.name))
 ```
 
-## filter
+### filter
 ```js
 db.filter('Users', user => user.isAdmin)
 ```
 
-## getMany
+### getMany
 ```js
 db.getMany('Users', ['key 1', 'key 2', 'key 3'])
 ```
 
-## ready
+### ready
 ```js
 db.ready.then(() => 'Connected to database!')
 ```
 
-## connect
+### connect
 ```js
 db.connect() === db.ready
 
