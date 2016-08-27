@@ -1,14 +1,13 @@
 {
 	"name": "aero-aerospike",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Aerospike database client for Aero.",
 	"keywords": [
 		"aero",
 		"aerospike"
 	],
-	"homepage": "",
 	"repository": "aerojs/aero-aerospike",
-	"license": "",
+	"license": "GPL-3.0",
 	"dependencies": {
 		"aerospike": "*",
 		"bluebird": "*"
