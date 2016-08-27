@@ -55,7 +55,7 @@ let db = aerospike.client({
 	namespace: 'Test'
 })
 ```
-The configuration parameters are directly handed over to the `Aerospike.client` constructor of the officia aerospike node library. Therefore you can also specify `hosts`, `log`, `policies` and so on. `host` is a shortcut notation added by this library. `namespace` specifies the namespace you want to operate on.
+The configuration parameters are directly handed over to the `Aerospike.client` constructor of the official aerospike node library. Therefore you can also specify `hosts`, `log`, `policies` and so on. `host` is a shortcut notation added by this library. `namespace` specifies the namespace you want to operate on.
 
 ### get
 ```js
