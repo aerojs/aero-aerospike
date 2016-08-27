@@ -17,6 +17,15 @@ let db = aerospike.client({
 db.connect()
 ```
 
+## aerospike.client
+```js
+let db = aerospike.client({
+	host: '127.0.0.1:3000',
+	namespace: 'Test'
+})
+```
+The configuration parameters are directly handed over to the `Aerospike.client` constructor of the officia aerospike node library. Therefore you can also specify `hosts`, `log`, `policies` and so on. `host` is a shortcut notation added by this library. `namespace` specifies the namespace you want to operate on.
+
 ## get
 ```js
 db.get('Users', 'key')
