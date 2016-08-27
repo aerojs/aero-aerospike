@@ -38,7 +38,7 @@ db.set('Users', 'key', {
 })
 ```
 
-Does not delete existing properties. Only updates the `name` property.
+Does not delete existing properties if the record already exists. Only updates the `name` property.
 
 ## remove
 ```js
