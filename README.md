@@ -1,6 +1,6 @@
 # aero-aerospike
 
-This client can be used as a standalone package (without using Aero). It is a lightweight wrapper built on top of the official node.js client. All API calls return [bluebird](https://github.com/petkaantonov/bluebird/) promises.
+This client can be used as a standalone package (without using Aero). It is a lightweight wrapper built on top of the [official node.js client](https://github.com/aerospike/aerospike-client-nodejs). All API calls return [bluebird](https://github.com/petkaantonov/bluebird/) promises.
 
 ## Installation
 Add `aero-aerospike` to `dependencies` in your `package.json`:
