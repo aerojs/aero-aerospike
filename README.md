@@ -20,10 +20,11 @@ Add the database configuration to your `config.json`:
 
 ```json
 "database": {
-	"host": "127.0.0.1:3000",
 	"namespace": "test"
 }
 ```
+
+You can also specify `"host": "127.0.0.1:3000"` if needed.
 
 Now you can subscribe to the event `database ready`:
 
