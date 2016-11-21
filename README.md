@@ -87,6 +87,11 @@ db.forEach('Users', user => console.log(user.name))
 db.filter('Users', user => user.isAdmin)
 ```
 
+### all
+```js
+db.all('Users')
+```
+
 ### getMany
 ```js
 db.getMany('Users', ['key 1', 'key 2', 'key 3'])
